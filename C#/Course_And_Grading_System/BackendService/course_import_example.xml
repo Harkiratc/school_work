@@ -1,0 +1,63 @@
+<Courses>
+	<Course code = 'DD1311' name = 'C' period = '133'>
+		<CourseGrades>
+			<CourseGrade gradename = 'A' limit = '10' expression = 'g + b' />
+			<CourseGrade gradename = 'B' limit = '8' expression = 'g + b' />
+			<CourseGrade gradename = 'C' limit = '7' expression = 'g + b' />
+			<CourseGrade gradename = 'D' limit = '6' expression = 'g + b' />
+			<CourseGrade gradename = 'E' limit = '5' expression = 'g + b' />
+			<CourseGrade gradename = 'F' limit = '0' expression = 'g + b' />
+		</CourseGrades>
+		<TaskGroups>
+			<TaskGroup name = 'Tenta'>
+				<TaskGroupGrades>
+					<TaskGroupGrade limit = '60' value = '10' name = 'A' expression = 'g/100'/>
+					<TaskGroupGrade limit = '50' value = '8' name = 'B' expression = 'g/100'/>
+					<TaskGroupGrade limit = '45' value = '6' name = 'C' expression = 'g/100'/>
+					<TaskGroupGrade limit = '42' value = '5' name = 'D' expression = 'g/100'/>
+					<TaskGroupGrade limit = '39' value = '4' name = 'E' expression = 'g/100'/>
+					<TaskGroupGrade limit = '0' value = '0' name = 'F' expression = 'g/100'/>
+
+				</TaskGroupGrades>
+				<Tasks>
+					<Task name = 'TEN' gradetype = '1' weight = '100' />
+				</Tasks>
+			</TaskGroup> 
+			 <TaskGroup name = 'Homework'>
+				<TaskGroupGrades>
+					<TaskGroupGrade limit = '10' value = '4' name = 'BON' expression = 'g/100'/>
+					<TaskGroupGrade limit = '0' value = '0' name = 'NBON' expression = 'g/100'/>
+
+				</TaskGroupGrades>
+				<Tasks>
+					<Task name = 'Homework' gradetype = '3' weight = '100' />
+				</Tasks>
+			</TaskGroup> 
+		</TaskGroups>
+	</Course> 
+	<Course code = 'DD1412' name = 'C++' period = '134'>
+		<CourseGrades>
+			<CourseGrade gradename = 'A' limit = '30' expression = 'g' />
+			<CourseGrade gradename = 'B' limit = '25' expression = 'g' />
+			<CourseGrade gradename = 'C' limit = '20' expression = 'g' />
+			<CourseGrade gradename = 'D' limit = '15' expression = 'g' />
+			<CourseGrade gradename = 'E' limit = '10' expression = 'g' />
+			<CourseGrade gradename = 'F' limit = '0' expression = 'g' />
+		</CourseGrades>
+		<TaskGroups>
+			<TaskGroup name = 'Tenta/Bonus'>
+				<TaskGroupGrades>
+					<TaskGroupGrade limit = '60' value = '10' name = 'A' expression = 'b + g/100'/>
+					<TaskGroupGrade limit = '50' value = '8' name = 'B' expression = 'b + g/100'/>
+					<TaskGroupGrade limit = '45' value = '6' name = 'C' expression = 'b + g/100'/>
+					<TaskGroupGrade limit = '42' value = '5' name = 'D' expression = 'b + g/100'/>
+					<TaskGroupGrade limit = '39' value = '4' name = 'E' expression = 'b + g/100'/>
+					<TaskGroupGrade limit = '0' value = '0' name = 'F' expression = 'b + g/100'/>
+				</TaskGroupGrades>
+				<Tasks>
+					<Task name = 'TEN' gradetype = '1' weight = '100' />
+					<Task name = 'Bonus' gradetype = '3' weight = '100' />
+				</Tasks>
+		</TaskGroups>
+	</Course> 
+</Courses>

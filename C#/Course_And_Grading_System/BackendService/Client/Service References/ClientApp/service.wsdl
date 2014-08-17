@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServerServices_SetUserState_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserState" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_SetUserState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_getTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTask" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_getTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCoursesFromXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCoursesFromXml" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCoursesFromXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCoursesFromXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTaskGroupGrades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskGroupGrades" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTaskGroupGrades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskGroupGradesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_CountReportedTasksForUserInCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountReportedTasksForUserInCourse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_CountReportedTasksForUserInCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountReportedTasksForUserInCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourseGrades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseGrades" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourseGrades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseGradesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUserTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTask" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUserTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddUserTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserTask" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddUserTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourseGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseGrade" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourseGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTaskGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskGroups" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTaskGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTasks" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUsersForCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersForCourse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUsersForCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersForCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUserFromId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromId" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUserFromId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourseAttentandsForCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseAttentandsForCourse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetCourseAttentandsForCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCourseAttentandsForCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCourseAttendant_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseAttendant" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCourseAttendant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseAttendantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_getCourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCourses" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_getCourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTask" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddTaskGroupGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaskGroupGrade" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddTaskGroupGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaskGroupGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddTaskGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaskGroup" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddTaskGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaskGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCourseGrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseGrade" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCourseGrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseGradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetAccessLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessLevel" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetAccessLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessLevelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTaskReported_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskReported" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetTaskReported_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaskReportedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_UpdateReported_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReported" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_UpdateReported_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReportedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IServerServices_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServerServices">
+    <wsdl:operation name="SetUserState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/SetUserState" message="tns:IServerServices_SetUserState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/SetUserStateResponse" message="tns:IServerServices_SetUserState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/getTask" message="tns:IServerServices_getTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/getTaskResponse" message="tns:IServerServices_getTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetUsers" message="tns:IServerServices_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetUsersResponse" message="tns:IServerServices_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCoursesFromXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddCoursesFromXml" message="tns:IServerServices_AddCoursesFromXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddCoursesFromXmlResponse" message="tns:IServerServices_AddCoursesFromXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGroupGrades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetTaskGroupGrades" message="tns:IServerServices_GetTaskGroupGrades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetTaskGroupGradesResponse" message="tns:IServerServices_GetTaskGroupGrades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountReportedTasksForUserInCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/CountReportedTasksForUserInCourse" message="tns:IServerServices_CountReportedTasksForUserInCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/CountReportedTasksForUserInCourseResponse" message="tns:IServerServices_CountReportedTasksForUserInCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseGrades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetCourseGrades" message="tns:IServerServices_GetCourseGrades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetCourseGradesResponse" message="tns:IServerServices_GetCourseGrades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetUserTask" message="tns:IServerServices_GetUserTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetUserTaskResponse" message="tns:IServerServices_GetUserTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetCourse" message="tns:IServerServices_GetCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetCourseResponse" message="tns:IServerServices_GetCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddUserTask" message="tns:IServerServices_AddUserTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddUserTaskResponse" message="tns:IServerServices_AddUserTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetCourseGrade" message="tns:IServerServices_GetCourseGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetCourseGradeResponse" message="tns:IServerServices_GetCourseGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetTaskGroups" message="tns:IServerServices_GetTaskGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetTaskGroupsResponse" message="tns:IServerServices_GetTaskGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetTasks" message="tns:IServerServices_GetTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetTasksResponse" message="tns:IServerServices_GetTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersForCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetUsersForCourse" message="tns:IServerServices_GetUsersForCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetUsersForCourseResponse" message="tns:IServerServices_GetUsersForCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetUserFromId" message="tns:IServerServices_GetUserFromId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetUserFromIdResponse" message="tns:IServerServices_GetUserFromId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseAttentandsForCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetCourseAttentandsForCourse" message="tns:IServerServices_GetCourseAttentandsForCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetCourseAttentandsForCourseResponse" message="tns:IServerServices_GetCourseAttentandsForCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCourseAttendant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddCourseAttendant" message="tns:IServerServices_AddCourseAttendant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddCourseAttendantResponse" message="tns:IServerServices_AddCourseAttendant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCourses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/getCourses" message="tns:IServerServices_getCourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/getCoursesResponse" message="tns:IServerServices_getCourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddTask" message="tns:IServerServices_AddTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddTaskResponse" message="tns:IServerServices_AddTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTaskGroupGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddTaskGroupGrade" message="tns:IServerServices_AddTaskGroupGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddTaskGroupGradeResponse" message="tns:IServerServices_AddTaskGroupGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTaskGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddTaskGroup" message="tns:IServerServices_AddTaskGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddTaskGroupResponse" message="tns:IServerServices_AddTaskGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCourseGrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddCourseGrade" message="tns:IServerServices_AddCourseGrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddCourseGradeResponse" message="tns:IServerServices_AddCourseGrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddCourse" message="tns:IServerServices_AddCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddCourseResponse" message="tns:IServerServices_AddCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessLevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetAccessLevel" message="tns:IServerServices_GetAccessLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetAccessLevelResponse" message="tns:IServerServices_GetAccessLevel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskReported">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetTaskReported" message="tns:IServerServices_GetTaskReported_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetTaskReportedResponse" message="tns:IServerServices_GetTaskReported_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/Logout" message="tns:IServerServices_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/LogoutResponse" message="tns:IServerServices_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReported">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/UpdateReported" message="tns:IServerServices_UpdateReported_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/UpdateReportedResponse" message="tns:IServerServices_UpdateReported_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/Login" message="tns:IServerServices_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/LoginResponse" message="tns:IServerServices_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/GetUser" message="tns:IServerServices_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/GetUserResponse" message="tns:IServerServices_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerServices/AddUser" message="tns:IServerServices_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerServices/AddUserResponse" message="tns:IServerServices_AddUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServerServices" type="tns:IServerServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetUserState">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/SetUserState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTask">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/getTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCoursesFromXml">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddCoursesFromXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGroupGrades">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetTaskGroupGrades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountReportedTasksForUserInCourse">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/CountReportedTasksForUserInCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseGrades">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetCourseGrades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTask">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetUserTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCourse">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserTask">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddUserTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseGrade">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetCourseGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskGroups">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetTaskGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTasks">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersForCourse">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetUsersForCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromId">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetUserFromId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCourseAttentandsForCourse">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetCourseAttentandsForCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCourseAttendant">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddCourseAttendant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourses">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/getCourses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTaskGroupGrade">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddTaskGroupGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTaskGroup">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddTaskGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCourseGrade">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddCourseGrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCourse">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessLevel">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetAccessLevel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskReported">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetTaskReported" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReported">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/UpdateReported" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IServerServices/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IServerServices" binding="tns:BasicHttpBinding_IServerServices">
+      <soap:address location="http://tfs-21786/service/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
